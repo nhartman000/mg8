@@ -1,1 +1,50 @@
-{\n  "$schema": "http://json-schema.org/draft-07/schema#",\n  "type": "object",\n  "properties": {\n    "version": {\n      "type": "string",\n      "description": "The version of the .mg8 file format"\n    },\n    "data": {\n      "type": "object",\n      "properties": {\n        "name": {\n          "type": "string",\n          "description": "The name of the entity"\n        },\n        "attributes": {\n          "type": "object",\n          "additionalProperties": {\n            "type": "string"\n          }\n        }\n      },\n      "required": ["name", "attributes"]\n    }\n  },\n  "required": ["version", "data"]\n}
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://americanmilestone.example/schema/mg8.schema.json",
+  "title": "MG8 Unit Manifest",
+  "description": "Manifest schema for a bounded .mg8 execution unit.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "mg8_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unit_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entry": {
+      "type": "string",
+      "pattern": "\\.ork$",
+      "description": "Unit-scope orchestration entry script, normally flow.ork."
+    },
+    "state": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "\\.gst$"
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "\\.g8son$"
+      }
+    },
+    "trace": {
+      "type": "string",
+      "pattern": "\\.qson$"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": ["mg8_version", "unit_id", "entry", "state", "gates", "trace"]
+}
