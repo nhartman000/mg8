@@ -1,23 +1,16 @@
-# Example .mg8 File
-
-# This is a simple example of a .mg8 file demonstrating gate structure and logic.
-
-# Define gates
-AND gate1 (input1, input2) -> output1;
-OR gate2 (input1, input2) -> output2;
-NOT gate3 (input1) -> output3;
-
-# Connect gates
-output1 -> output4;
-output2 -> output5;
-output3 -> output6;
-
-# Define inputs
-input1 = 1;
-input2 = 0;
-
-# Process logic
-# This section describes how the outputs are derived from inputs
-output4 = AND(input1, input2);
-output5 = OR(input1, input2);
-output6 = NOT(input1);
+{
+  "mg8_version": "1.0",
+  "unit_id": "example.basic.001",
+  "entry": "flow.ork",
+  "state": [
+    "state/current.gst"
+  ],
+  "gates": [
+    "gates/eligibility.g8son"
+  ],
+  "trace": "trace/execution.qson",
+  "metadata": {
+    "description": "Minimal bounded MG8 unit manifest example",
+    "note": "This example binds orchestration, state, gates, and trace resources. The referenced file grammars are specified separately."
+  }
+}
