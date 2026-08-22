@@ -59,16 +59,28 @@ A `.g8son` file may contain multiple gates. Every gate execution attempt receive
 
 ## `.gst` state role
 
-`.gst` is the state/context layer. It carries the structured state against which gates are evaluated. The broader Mg8 state model includes current-state and prior-state continuity, with state-detection semantics kept distinct from the gate/operator layer.
+`.gst` is the state/context layer. It carries the structured state against which gates are evaluated. The broader MG8 state model includes current-state and prior-state continuity, with state-detection semantics kept distinct from the gate/operator layer.
 
 ## Repository structure
 
 - [`spec/mg8_v1.md`](spec/mg8_v1.md) — canonical `.mg8` specification
-- [`schema/mg8.schema.json`](schema/mg8.schema.json) — current manifest/schema contract
+- [`schema/mg8.schema.json`](schema/mg8.schema.json) — current `.mg8` manifest/schema contract
 - [`examples/basic.mg8`](examples/basic.mg8) — minimal `.mg8` unit example
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — file-family and runtime architecture
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — unit/runtime architecture
+- [`docs/FILE_FAMILY.md`](docs/FILE_FAMILY.md) — cross-repository file-family registry and authority map
+- [`spec/ork_reference_profile.md`](spec/ork_reference_profile.md) — interim `.ork` orchestration reference profile
+- [`spec/mg8pk_v1.md`](spec/mg8pk_v1.md) — baseline `.mg8pk` package-role specification
 - [`docs/PROVENANCE.md`](docs/PROVENANCE.md) — provenance and scope boundary
 
-## Status
+Dedicated current format repositories:
 
-This repository defines the `.mg8` unit and its relationship to the wider MG8 file family. Components are being formalized incrementally; undocumented behavior should not be inferred merely from file names.
+- GST: https://github.com/nhartman000/gst
+- G8SON: https://github.com/nhartman000/g8son
+- QSON: https://github.com/nhartman000/qson-
+- Reference runtime: https://github.com/nhartman000/mg8-engine
+
+## Specification status
+
+This repository is the authority for the `.mg8` unit and the current cross-file family registry.
+
+The roles of `.ork` and `.mg8pk` are established, but standalone repositories/full grammars for them are not yet present in the connected GitHub account. Their documents here are therefore explicitly versioned as interim/baseline specifications rather than silently inventing a finished universal grammar.
