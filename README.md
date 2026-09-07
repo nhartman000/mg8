@@ -76,7 +76,7 @@ Dedicated current format repositories:
 
 - GST: https://github.com/nhartman000/gst
 - G8SON: https://github.com/nhartman000/g8son
-- QSON: https://github.com/nhartman000/qson-
+- QSON: https://github.com/nhartman000/qson
 - Reference runtime: https://github.com/nhartman000/mg8-engine
 
 ## Specification status
