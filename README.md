@@ -79,6 +79,12 @@ Dedicated current format repositories:
 - QSON: https://github.com/nhartman000/qson
 - Reference runtime: https://github.com/nhartman000/mg8-engine
 
+## Response-contract examples and measured repeatability
+
+The opt-in [response-contract profile](docs/RESPONSE_CONTRACTS.md) binds GST globals/facts and G8SON atomic requirements into a model-facing response contract. The [simple, ordered and grammar examples](examples/response-contracts/) preserve the tested conditions.
+
+[Published live evidence](experiments/response-contracts/README.md) retains both the original divergent batch and the revised batch: each revised contract produced three byte-identical responses in three fresh calls, without temperature, seed or answer reuse. This is a finite observed result, not a guarantee of deterministic inference. The existing canonical format contracts are unchanged.
+
 ## Specification status
 
 This repository is the authority for the `.mg8` unit and the current cross-file family registry.
