@@ -1,0 +1,277 @@
+{
+  "qson_version": "1.0",
+  "run_id": "RUN_d860293d225041aa8636a25d33f39a41",
+  "entries": [
+    {
+      "trace_id": "ATT_1d4b0a8f1a5e46e8831bd7202131b434",
+      "run_id": "RUN_d860293d225041aa8636a25d33f39a41",
+      "file_id": null,
+      "gate_id": "response-contract.byte-comparison",
+      "step": 1,
+      "input_state_id": null,
+      "output_state_id": null,
+      "result": "UNKNOWN",
+      "action": "generate_once",
+      "actor": "mg8-engine",
+      "input_state": {
+        "user_prompt": "What is photosynthesis? Explain simply."
+      },
+      "llm_prompt": "Answer the user prompt by satisfying the active GST globals and all G8SON atomic requirements. Facts are supplied as semantic inputs, not a prior response. Do not output your analysis, gate verdicts or instructions. Emit only the requested sentence.\n{\n  \"GST\": {\n    \"gst_version\": \"1.0\",\n    \"context_id\": \"CTX_PHOTOSYNTHESIS_REVISED\",\n    \"interpretation_posture\": \"Factual\",\n    \"primary_modality\": \"Scientific\",\n    \"globals\": {\n      \"audience\": \"ninth-grade reader\",\n      \"reading_target\": \"plain language at or below grade 9; retain necessary scientific terms\",\n      \"voice\": \"active\",\n      \"tense\": \"simple present\",\n      \"format\": \"one subject-predicate sentence, no verse\",\n      \"encoding\": \"ASCII\",\n      \"punctuation\": \"one final period only\",\n      \"whitespace\": \"single spaces, no leading/trailing whitespace, no newline\",\n      \"extra_content\": \"no headings, lists, citations, disclaimers or commentary\"\n    },\n    \"facts\": {\n      \"subject\": \"Photosynthesis\",\n      \"energy_source\": \"sunlight\",\n      \"inputs\": [\n        \"carbon dioxide\",\n        \"water\"\n      ],\n      \"outputs\": [\n        \"glucose\",\n        \"oxygen\"\n      ],\n      \"organisms\": \"plants\"\n    },\n    \"constraints\": [\n      \"No fixed wording beyond the subject and scientific terms.\"\n    ]\n  },\n  \"G8SON\": [\n    {\n      \"gate_id\": \"G_PHOTO_SIMPLE\",\n      \"gate_name\": \"Revised simple response contract\",\n      \"atomic_requirements\": [\n        {\n          \"req_id\": \"R1\",\n          \"requirement\": \"Explain the energy source, both inputs and both outputs accurately in one sentence of 16 to 24 words.\"\n        },\n        {\n          \"req_id\": \"R2\",\n          \"requirement\": \"Begin with the subject Photosynthesis. Use a simple predicate and ninth-grade plain language.\"\n        },\n        {\n          \"req_id\": \"R3\",\n          \"requirement\": \"Follow every GST global. Do not add a second sentence.\"\n        }\n      ]\n    }\n  ],\n  \"NYCH_intake\": {\n    \"gst_version\": \"1.0\",\n    \"state_id\": \"nych-e62dc415040c\",\n    \"domain\": \"general\",\n    \"state\": {\n      \"source_text\": \"What is photosynthesis? Explain simply.\",\n      \"roles\": {\n        \"sentence\": \"What is photosynthesis? Explain simply.\",\n        \"tokens\": [\n          \"What\",\n          \"is\",\n          \"photosynthesis?\",\n          \"Explain\",\n          \"simply.\"\n        ],\n        \"action\": null,\n        \"enumerator\": null,\n        \"object\": {\n          \"word\": \"What is photosynthesis? Explain simply.\",\n          \"start\": 0,\n          \"end\": 5\n        },\n        \"tense\": null,\n        \"state\": null\n      }\n    },\n    \"nych_pretext\": {\n      \"analysis\": {\n        \"text\": \"What is photosynthesis? Explain simply.\",\n        \"modality\": \"UNRESOLVED\",\n        \"modality_score\": 0,\n        \"domain\": \"UNRESOLVED\",\n        \"domain_score\": 0,\n        \"competency\": null\n      },\n      \"subdomain\": null,\n      \"tote_match\": null,\n      \"tote_fallback\": null,\n      \"modality_operators\": {\n        \"external_observe\": \"\ud83d\udc40\",\n        \"internal_model\": \"\ud83d\udc41\ufe0f\ud83e\udde0\",\n        \"operative_intent\": \"\ud83d\uddef\ufe0f\",\n        \"execute\": \"\ud83d\udcaa\"\n      },\n      \"needs_mapping\": [\n        {\n          \"word\": \"What\",\n          \"skeleton\": \"wht\",\n          \"id\": \"gestalt.wht\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"is\",\n          \"skeleton\": \"s\",\n          \"id\": \"gestalt.s\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"photosynthesis?\",\n          \"skeleton\": \"phtsynthss\",\n          \"id\": \"gestalt.phtsynthss\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"Explain\",\n          \"skeleton\": \"xpln\",\n          \"id\": \"gestalt.xpln\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"simply.\",\n          \"skeleton\": \"smply\",\n          \"id\": \"gestalt.smply\",\n          \"skeleton_fallback\": false\n        }\n      ],\n      \"pinned\": [],\n      \"protected\": [],\n      \"discretion_rules\": [\n        \"Chunk and compress any deterministic findings that can be compressed before rendering symbol matches.\",\n        \"Map each word needing a symbol by the most obvious visual match.\",\n        \"Embed the provided consonant skeleton (word sans vowels and doubled consonants) into the chosen symbol's id string as a disambiguation clue.\",\n        \"The four modality operators are invariant: they are never remapped, and their glyphs are never assigned to any other word.\",\n        \"A word already pinned #temp-invariant this session keeps its existing mapping; do not re-decide it.\",\n        \"Scientific names, names of people, and prescription drug names are NOT rendered into Gestalt symbols: pass them through literally, with no glyph, no skeleton id, and no session pin.\"\n      ],\n      \"pruning\": {\n        \"dither\": 0.1,\n        \"instructions\": [\n          \"Narrow the problemspace by the factor of the inverse transform using the deterministic findings below as pretext.\",\n          \"Coarse prune by domain first: discard content outside the classified domain (treat UNRESOLVED as no domain constraint).\",\n          \"Fine prune by subdomain within the surviving domain when a subdomain is given.\",\n          \"Apply the competency check within domain: gate content depth to the reported competency score (None means no competency gate).\",\n          \"Apply the dither margin as controlled boundary leakage: allow content within the margin just outside the pruned boundary through, so access widens gradually from novice to expert rather than cliff-edging.\"\n        ]\n      }\n    }\n  }\n}",
+      "llm_output": {
+        "sequence": 1,
+        "attempt_id": "ATT_1d4b0a8f1a5e46e8831bd7202131b434",
+        "status": "OBSERVED",
+        "response": {
+          "content": "Photosynthesis uses energy from sunlight to turn carbon dioxide and water into glucose and oxygen in plants.",
+          "response_id": "resp_090a75a9140d2b61016ade6e2e90b08192bd6f997938dfb5fd",
+          "model": "gpt-6.1-sol",
+          "usage": {
+            "input_tokens": 1346,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 96,
+            "output_tokens_details": {
+              "reasoning_tokens": 71
+            },
+            "total_tokens": 1442,
+            "attribution": {
+              "items": {
+                "msg_090a75a9140d2b61016ade6e2e91488192a8f20fb0568b467a": {
+                  "input_tokens": 12,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0,
+                  "content": [
+                    {
+                      "input_tokens": 12,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 0
+                    }
+                  ]
+                },
+                "msg_090a75a9140d2b61016ade6e3335a081929918ed2dd325eafe": {
+                  "input_tokens": 0,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 25,
+                  "content": [
+                    {
+                      "input_tokens": 0,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 25
+                    }
+                  ]
+                },
+                "rs_090a75a9140d2b61016ade6e30390c8192b1db45037a10440f": {
+                  "input_tokens": 2,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 71
+                }
+              },
+              "request_fields": {
+                "instructions": {
+                  "input_tokens": 1332,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              }
+            }
+          },
+          "system_fingerprint": null
+        },
+        "sha256": "deace3951b7af2c7698f1fd2495a361159ba147f803e8afd4c86828268cc29a8",
+        "utf8_bytes": 108
+      },
+      "modality": null,
+      "timestamp": "2026-10-25T21:01:39.836621+00:00",
+      "comparison_status": "OBSERVED"
+    },
+    {
+      "trace_id": "ATT_da5fc40597fe4dbb8cdc10b911084c93",
+      "run_id": "RUN_d860293d225041aa8636a25d33f39a41",
+      "file_id": null,
+      "gate_id": "response-contract.byte-comparison",
+      "step": 2,
+      "input_state_id": null,
+      "output_state_id": null,
+      "result": "UNKNOWN",
+      "action": "generate_once",
+      "actor": "mg8-engine",
+      "input_state": {
+        "user_prompt": "What is photosynthesis? Explain simply."
+      },
+      "llm_prompt": "Answer the user prompt by satisfying the active GST globals and all G8SON atomic requirements. Facts are supplied as semantic inputs, not a prior response. Do not output your analysis, gate verdicts or instructions. Emit only the requested sentence.\n{\n  \"GST\": {\n    \"gst_version\": \"1.0\",\n    \"context_id\": \"CTX_PHOTOSYNTHESIS_REVISED\",\n    \"interpretation_posture\": \"Factual\",\n    \"primary_modality\": \"Scientific\",\n    \"globals\": {\n      \"audience\": \"ninth-grade reader\",\n      \"reading_target\": \"plain language at or below grade 9; retain necessary scientific terms\",\n      \"voice\": \"active\",\n      \"tense\": \"simple present\",\n      \"format\": \"one subject-predicate sentence, no verse\",\n      \"encoding\": \"ASCII\",\n      \"punctuation\": \"one final period only\",\n      \"whitespace\": \"single spaces, no leading/trailing whitespace, no newline\",\n      \"extra_content\": \"no headings, lists, citations, disclaimers or commentary\"\n    },\n    \"facts\": {\n      \"subject\": \"Photosynthesis\",\n      \"energy_source\": \"sunlight\",\n      \"inputs\": [\n        \"carbon dioxide\",\n        \"water\"\n      ],\n      \"outputs\": [\n        \"glucose\",\n        \"oxygen\"\n      ],\n      \"organisms\": \"plants\"\n    },\n    \"constraints\": [\n      \"No fixed wording beyond the subject and scientific terms.\"\n    ]\n  },\n  \"G8SON\": [\n    {\n      \"gate_id\": \"G_PHOTO_SIMPLE\",\n      \"gate_name\": \"Revised simple response contract\",\n      \"atomic_requirements\": [\n        {\n          \"req_id\": \"R1\",\n          \"requirement\": \"Explain the energy source, both inputs and both outputs accurately in one sentence of 16 to 24 words.\"\n        },\n        {\n          \"req_id\": \"R2\",\n          \"requirement\": \"Begin with the subject Photosynthesis. Use a simple predicate and ninth-grade plain language.\"\n        },\n        {\n          \"req_id\": \"R3\",\n          \"requirement\": \"Follow every GST global. Do not add a second sentence.\"\n        }\n      ]\n    }\n  ],\n  \"NYCH_intake\": {\n    \"gst_version\": \"1.0\",\n    \"state_id\": \"nych-e62dc415040c\",\n    \"domain\": \"general\",\n    \"state\": {\n      \"source_text\": \"What is photosynthesis? Explain simply.\",\n      \"roles\": {\n        \"sentence\": \"What is photosynthesis? Explain simply.\",\n        \"tokens\": [\n          \"What\",\n          \"is\",\n          \"photosynthesis?\",\n          \"Explain\",\n          \"simply.\"\n        ],\n        \"action\": null,\n        \"enumerator\": null,\n        \"object\": {\n          \"word\": \"What is photosynthesis? Explain simply.\",\n          \"start\": 0,\n          \"end\": 5\n        },\n        \"tense\": null,\n        \"state\": null\n      }\n    },\n    \"nych_pretext\": {\n      \"analysis\": {\n        \"text\": \"What is photosynthesis? Explain simply.\",\n        \"modality\": \"UNRESOLVED\",\n        \"modality_score\": 0,\n        \"domain\": \"UNRESOLVED\",\n        \"domain_score\": 0,\n        \"competency\": null\n      },\n      \"subdomain\": null,\n      \"tote_match\": null,\n      \"tote_fallback\": null,\n      \"modality_operators\": {\n        \"external_observe\": \"\ud83d\udc40\",\n        \"internal_model\": \"\ud83d\udc41\ufe0f\ud83e\udde0\",\n        \"operative_intent\": \"\ud83d\uddef\ufe0f\",\n        \"execute\": \"\ud83d\udcaa\"\n      },\n      \"needs_mapping\": [\n        {\n          \"word\": \"What\",\n          \"skeleton\": \"wht\",\n          \"id\": \"gestalt.wht\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"is\",\n          \"skeleton\": \"s\",\n          \"id\": \"gestalt.s\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"photosynthesis?\",\n          \"skeleton\": \"phtsynthss\",\n          \"id\": \"gestalt.phtsynthss\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"Explain\",\n          \"skeleton\": \"xpln\",\n          \"id\": \"gestalt.xpln\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"simply.\",\n          \"skeleton\": \"smply\",\n          \"id\": \"gestalt.smply\",\n          \"skeleton_fallback\": false\n        }\n      ],\n      \"pinned\": [],\n      \"protected\": [],\n      \"discretion_rules\": [\n        \"Chunk and compress any deterministic findings that can be compressed before rendering symbol matches.\",\n        \"Map each word needing a symbol by the most obvious visual match.\",\n        \"Embed the provided consonant skeleton (word sans vowels and doubled consonants) into the chosen symbol's id string as a disambiguation clue.\",\n        \"The four modality operators are invariant: they are never remapped, and their glyphs are never assigned to any other word.\",\n        \"A word already pinned #temp-invariant this session keeps its existing mapping; do not re-decide it.\",\n        \"Scientific names, names of people, and prescription drug names are NOT rendered into Gestalt symbols: pass them through literally, with no glyph, no skeleton id, and no session pin.\"\n      ],\n      \"pruning\": {\n        \"dither\": 0.1,\n        \"instructions\": [\n          \"Narrow the problemspace by the factor of the inverse transform using the deterministic findings below as pretext.\",\n          \"Coarse prune by domain first: discard content outside the classified domain (treat UNRESOLVED as no domain constraint).\",\n          \"Fine prune by subdomain within the surviving domain when a subdomain is given.\",\n          \"Apply the competency check within domain: gate content depth to the reported competency score (None means no competency gate).\",\n          \"Apply the dither margin as controlled boundary leakage: allow content within the margin just outside the pruned boundary through, so access widens gradually from novice to expert rather than cliff-edging.\"\n        ]\n      }\n    }\n  }\n}",
+      "llm_output": {
+        "sequence": 2,
+        "attempt_id": "ATT_da5fc40597fe4dbb8cdc10b911084c93",
+        "status": "OBSERVED",
+        "response": {
+          "content": "Photosynthesis uses energy from sunlight to turn carbon dioxide and water into glucose and oxygen in plants.",
+          "response_id": "resp_0617fd3f12aff889016ade6e343d5081a0bf63f96f10fef389",
+          "model": "gpt-6.1-sol",
+          "usage": {
+            "input_tokens": 1346,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 70,
+            "output_tokens_details": {
+              "reasoning_tokens": 45
+            },
+            "total_tokens": 1416,
+            "attribution": {
+              "items": {
+                "msg_0617fd3f12aff889016ade6e343dfc81a09aba5e973190a83d": {
+                  "input_tokens": 12,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0,
+                  "content": [
+                    {
+                      "input_tokens": 12,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 0
+                    }
+                  ]
+                },
+                "msg_0617fd3f12aff889016ade6e380b3081a0a6f5b28f9292c7f1": {
+                  "input_tokens": 0,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 25,
+                  "content": [
+                    {
+                      "input_tokens": 0,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 25
+                    }
+                  ]
+                },
+                "rs_0617fd3f12aff889016ade6e356c7481a0af62cb3a38811811": {
+                  "input_tokens": 2,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 45
+                }
+              },
+              "request_fields": {
+                "instructions": {
+                  "input_tokens": 1332,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              }
+            }
+          },
+          "system_fingerprint": null
+        },
+        "sha256": "deace3951b7af2c7698f1fd2495a361159ba147f803e8afd4c86828268cc29a8",
+        "utf8_bytes": 108
+      },
+      "modality": null,
+      "timestamp": "2026-10-25T21:01:44.652958+00:00",
+      "comparison_status": "OBSERVED"
+    },
+    {
+      "trace_id": "ATT_07bf3f2aeaa9482785f7c46efbd9698e",
+      "run_id": "RUN_d860293d225041aa8636a25d33f39a41",
+      "file_id": null,
+      "gate_id": "response-contract.byte-comparison",
+      "step": 3,
+      "input_state_id": null,
+      "output_state_id": null,
+      "result": "UNKNOWN",
+      "action": "generate_once",
+      "actor": "mg8-engine",
+      "input_state": {
+        "user_prompt": "What is photosynthesis? Explain simply."
+      },
+      "llm_prompt": "Answer the user prompt by satisfying the active GST globals and all G8SON atomic requirements. Facts are supplied as semantic inputs, not a prior response. Do not output your analysis, gate verdicts or instructions. Emit only the requested sentence.\n{\n  \"GST\": {\n    \"gst_version\": \"1.0\",\n    \"context_id\": \"CTX_PHOTOSYNTHESIS_REVISED\",\n    \"interpretation_posture\": \"Factual\",\n    \"primary_modality\": \"Scientific\",\n    \"globals\": {\n      \"audience\": \"ninth-grade reader\",\n      \"reading_target\": \"plain language at or below grade 9; retain necessary scientific terms\",\n      \"voice\": \"active\",\n      \"tense\": \"simple present\",\n      \"format\": \"one subject-predicate sentence, no verse\",\n      \"encoding\": \"ASCII\",\n      \"punctuation\": \"one final period only\",\n      \"whitespace\": \"single spaces, no leading/trailing whitespace, no newline\",\n      \"extra_content\": \"no headings, lists, citations, disclaimers or commentary\"\n    },\n    \"facts\": {\n      \"subject\": \"Photosynthesis\",\n      \"energy_source\": \"sunlight\",\n      \"inputs\": [\n        \"carbon dioxide\",\n        \"water\"\n      ],\n      \"outputs\": [\n        \"glucose\",\n        \"oxygen\"\n      ],\n      \"organisms\": \"plants\"\n    },\n    \"constraints\": [\n      \"No fixed wording beyond the subject and scientific terms.\"\n    ]\n  },\n  \"G8SON\": [\n    {\n      \"gate_id\": \"G_PHOTO_SIMPLE\",\n      \"gate_name\": \"Revised simple response contract\",\n      \"atomic_requirements\": [\n        {\n          \"req_id\": \"R1\",\n          \"requirement\": \"Explain the energy source, both inputs and both outputs accurately in one sentence of 16 to 24 words.\"\n        },\n        {\n          \"req_id\": \"R2\",\n          \"requirement\": \"Begin with the subject Photosynthesis. Use a simple predicate and ninth-grade plain language.\"\n        },\n        {\n          \"req_id\": \"R3\",\n          \"requirement\": \"Follow every GST global. Do not add a second sentence.\"\n        }\n      ]\n    }\n  ],\n  \"NYCH_intake\": {\n    \"gst_version\": \"1.0\",\n    \"state_id\": \"nych-e62dc415040c\",\n    \"domain\": \"general\",\n    \"state\": {\n      \"source_text\": \"What is photosynthesis? Explain simply.\",\n      \"roles\": {\n        \"sentence\": \"What is photosynthesis? Explain simply.\",\n        \"tokens\": [\n          \"What\",\n          \"is\",\n          \"photosynthesis?\",\n          \"Explain\",\n          \"simply.\"\n        ],\n        \"action\": null,\n        \"enumerator\": null,\n        \"object\": {\n          \"word\": \"What is photosynthesis? Explain simply.\",\n          \"start\": 0,\n          \"end\": 5\n        },\n        \"tense\": null,\n        \"state\": null\n      }\n    },\n    \"nych_pretext\": {\n      \"analysis\": {\n        \"text\": \"What is photosynthesis? Explain simply.\",\n        \"modality\": \"UNRESOLVED\",\n        \"modality_score\": 0,\n        \"domain\": \"UNRESOLVED\",\n        \"domain_score\": 0,\n        \"competency\": null\n      },\n      \"subdomain\": null,\n      \"tote_match\": null,\n      \"tote_fallback\": null,\n      \"modality_operators\": {\n        \"external_observe\": \"\ud83d\udc40\",\n        \"internal_model\": \"\ud83d\udc41\ufe0f\ud83e\udde0\",\n        \"operative_intent\": \"\ud83d\uddef\ufe0f\",\n        \"execute\": \"\ud83d\udcaa\"\n      },\n      \"needs_mapping\": [\n        {\n          \"word\": \"What\",\n          \"skeleton\": \"wht\",\n          \"id\": \"gestalt.wht\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"is\",\n          \"skeleton\": \"s\",\n          \"id\": \"gestalt.s\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"photosynthesis?\",\n          \"skeleton\": \"phtsynthss\",\n          \"id\": \"gestalt.phtsynthss\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"Explain\",\n          \"skeleton\": \"xpln\",\n          \"id\": \"gestalt.xpln\",\n          \"skeleton_fallback\": false\n        },\n        {\n          \"word\": \"simply.\",\n          \"skeleton\": \"smply\",\n          \"id\": \"gestalt.smply\",\n          \"skeleton_fallback\": false\n        }\n      ],\n      \"pinned\": [],\n      \"protected\": [],\n      \"discretion_rules\": [\n        \"Chunk and compress any deterministic findings that can be compressed before rendering symbol matches.\",\n        \"Map each word needing a symbol by the most obvious visual match.\",\n        \"Embed the provided consonant skeleton (word sans vowels and doubled consonants) into the chosen symbol's id string as a disambiguation clue.\",\n        \"The four modality operators are invariant: they are never remapped, and their glyphs are never assigned to any other word.\",\n        \"A word already pinned #temp-invariant this session keeps its existing mapping; do not re-decide it.\",\n        \"Scientific names, names of people, and prescription drug names are NOT rendered into Gestalt symbols: pass them through literally, with no glyph, no skeleton id, and no session pin.\"\n      ],\n      \"pruning\": {\n        \"dither\": 0.1,\n        \"instructions\": [\n          \"Narrow the problemspace by the factor of the inverse transform using the deterministic findings below as pretext.\",\n          \"Coarse prune by domain first: discard content outside the classified domain (treat UNRESOLVED as no domain constraint).\",\n          \"Fine prune by subdomain within the surviving domain when a subdomain is given.\",\n          \"Apply the competency check within domain: gate content depth to the reported competency score (None means no competency gate).\",\n          \"Apply the dither margin as controlled boundary leakage: allow content within the margin just outside the pruned boundary through, so access widens gradually from novice to expert rather than cliff-edging.\"\n        ]\n      }\n    }\n  }\n}",
+      "llm_output": {
+        "sequence": 3,
+        "attempt_id": "ATT_07bf3f2aeaa9482785f7c46efbd9698e",
+        "status": "OBSERVED",
+        "response": {
+          "content": "Photosynthesis uses energy from sunlight to turn carbon dioxide and water into glucose and oxygen in plants.",
+          "response_id": "resp_09316b54e08f6f85016ade6e3901948192bf208641cb65ba53",
+          "model": "gpt-6.1-sol",
+          "usage": {
+            "input_tokens": 1346,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 70,
+            "output_tokens_details": {
+              "reasoning_tokens": 45
+            },
+            "total_tokens": 1416,
+            "attribution": {
+              "items": {
+                "msg_09316b54e08f6f85016ade6e3902248192819395a93c584cb7": {
+                  "input_tokens": 12,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0,
+                  "content": [
+                    {
+                      "input_tokens": 12,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 0
+                    }
+                  ]
+                },
+                "msg_09316b54e08f6f85016ade6e3a9ce48192a0605ec8cf241eea": {
+                  "input_tokens": 0,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 25,
+                  "content": [
+                    {
+                      "input_tokens": 0,
+                      "cached_tokens": 0,
+                      "cache_write_tokens": 0,
+                      "output_tokens": 25
+                    }
+                  ]
+                },
+                "rs_09316b54e08f6f85016ade6e3a2d808192bbf1ab5e3bb6d13f": {
+                  "input_tokens": 2,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 45
+                }
+              },
+              "request_fields": {
+                "instructions": {
+                  "input_tokens": 1332,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              }
+            }
+          },
+          "system_fingerprint": null
+        },
+        "sha256": "deace3951b7af2c7698f1fd2495a361159ba147f803e8afd4c86828268cc29a8",
+        "utf8_bytes": 108
+      },
+      "modality": null,
+      "timestamp": "2026-10-25T21:01:46.894632+00:00",
+      "comparison_status": "OBSERVED"
+    }
+  ],
+  "comparison_outcome": "MATCH"
+}

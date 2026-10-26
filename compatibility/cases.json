@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "fixture": "fixtures/canonical.mg8",
+      "schema": "schemas/mg8.json",
+      "expected_conformant": true,
+      "source_repository": "nhartman000/mg8",
+      "source_path": "examples/basic.mg8"
+    },
+    {
+      "fixture": "fixtures/canonical.g8son",
+      "schema": "schemas/g8son.json",
+      "expected_conformant": true,
+      "source_repository": "nhartman000/g8son",
+      "source_path": "examples/basic.g8son"
+    },
+    {
+      "fixture": "fixtures/canonical.qson",
+      "schema": "schemas/qson.json",
+      "expected_conformant": true,
+      "source_repository": "nhartman000/qson",
+      "source_path": "examples/basic.qson"
+    },
+    {
+      "fixture": "fixtures/requirement-profile.g8son",
+      "schema": "schemas/g8son.json",
+      "expected_conformant": false,
+      "reason": "Explicit atomic_requirements profile, not canonical bounded-file envelope."
+    },
+    {
+      "fixture": "fixtures/engine-reference.qson",
+      "schema": "schemas/qson.json",
+      "expected_conformant": false,
+      "reason": "Actual reference-engine observation ledger uses entries/step/string actor; not canonical events envelope."
+    }
+  ],
+  "scope": "Structural schema compatibility only. No semantic evaluator or production certification implied.",
+  "expected_case_count": 5
+}

@@ -1,0 +1,202 @@
+{
+  "registry_version": "1.0",
+  "scope": "Explicit compatibility profiles, not universal format interoperability. Dedicated authority wins over implementation-local names.",
+  "authority": [
+    {
+      "format": "MG8",
+      "authority": "nhartman000/mg8",
+      "branch": "main",
+      "revision": "175106883c0c3fc6b14894c4fbdd4cbd51e2b9b6",
+      "path": "schema/mg8.schema.json",
+      "sha256": "bb326ed3371725d69bab90efc1c6120e8be8afac1f4e39abc90025772395e28f",
+      "note": "Canonical resource-binding envelope 1.0.",
+      "source_url": "https://github.com/nhartman000/mg8/blob/175106883c0c3fc6b14894c4fbdd4cbd51e2b9b6/schema/mg8.schema.json"
+    },
+    {
+      "format": "ORK",
+      "authority": "nhartman000/mg8",
+      "branch": "main",
+      "revision": "2f900083c9f275366885599623ddb6a7f4db910d",
+      "path": "spec/ork_reference_profile.md",
+      "sha256": "a39f94fa6ef8fd112163642105d86f9f44abe49b414a75f1608ec72737bf2278",
+      "note": "Interim v0.3 block header: invariant position/bounds, BONIT reference; not a universal executable grammar.",
+      "source_url": "https://github.com/nhartman000/mg8/blob/2f900083c9f275366885599623ddb6a7f4db910d/spec/ork_reference_profile.md"
+    },
+    {
+      "format": "BONIT",
+      "authority": "nhartman000/mg8",
+      "branch": "main",
+      "revision": "2f900083c9f275366885599623ddb6a7f4db910d",
+      "path": "spec/ork_reference_profile.md",
+      "sha256": "a39f94fa6ef8fd112163642105d86f9f44abe49b414a75f1608ec72737bf2278",
+      "note": "Interim domain-authority/workflow role; block language and named runtime JSON are different profiles.",
+      "source_url": "https://github.com/nhartman000/mg8/blob/2f900083c9f275366885599623ddb6a7f4db910d/spec/ork_reference_profile.md"
+    },
+    {
+      "format": "GST",
+      "authority": "nhartman000/gst",
+      "branch": "main",
+      "revision": "0d8aefbede38a6e9e8ec671ef9a135d491147ff2",
+      "path": "spec/gst_v1.md",
+      "sha256": "53e69692c782cdf0f84aec43dd969d654c9ebeba6809989088e84ffc2e0d8993",
+      "note": "Conceptual v1 state/context/continuity contract; no universal payload JSON Schema published.",
+      "source_url": "https://github.com/nhartman000/gst/blob/0d8aefbede38a6e9e8ec671ef9a135d491147ff2/spec/gst_v1.md"
+    },
+    {
+      "format": "G8SON",
+      "authority": "nhartman000/g8son",
+      "branch": "000",
+      "revision": "ecb193d90189c8bfdb2d0e7cebb00432a1d0e260",
+      "path": "schema/g8son.schema.json",
+      "sha256": "7c8d83005d3fc6a8ec2d7762a4f1ebc230dd28a05ec6df450a92436f49febfaf",
+      "note": "Canonical envelope with 1\u20133 gates; runtime/operator semantics require an explicit evaluator profile.",
+      "source_url": "https://github.com/nhartman000/g8son/blob/ecb193d90189c8bfdb2d0e7cebb00432a1d0e260/schema/g8son.schema.json"
+    },
+    {
+      "format": "QSON",
+      "authority": "nhartman000/qson",
+      "branch": "main",
+      "revision": "92e6e3e8f9f0fa4f501db21228116417d71df998",
+      "path": "schema/qson.schema.json",
+      "sha256": "3822c52bed38fd4aefa197a1549a39dfefc2fb793cc12473d450298390270c41",
+      "note": "Canonical events envelope; event identity/sequence/type/structured actor.",
+      "source_url": "https://github.com/nhartman000/qson/blob/92e6e3e8f9f0fa4f501db21228116417d71df998/schema/qson.schema.json"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "nych-intake",
+      "repository": "nhartman000/nych",
+      "role": "Current deterministic encoder reference; M-Gate rule/evaluator interfaces.",
+      "formats": {
+        "MG8": "Legacy local container adapter; not canonical manifest export.",
+        "ORK": "Workflow emission described in BONIT; not a full ORK v0.3 interpreter.",
+        "BONIT": "nych.bonit describes staged workflow; not an executable language parser.",
+        "GST": "build_gst emits canonical-concept-compatible pretext with unresolved findings.",
+        "G8SON": "nych.schemas.g8son local transform-result profile is not dedicated canonical schema.",
+        "QSON": "nych.schemas.qson local audit events/actor-string profile is not dedicated canonical schema."
+      },
+      "revision": "cee3610723ffe4877c424591711fed29717ab655",
+      "source_paths": [
+        "nych/gst_export.py",
+        "nych/schemas/mg8.py",
+        "nych/schemas/g8son.py",
+        "nych/schemas/qson.py",
+        "nych/gates.py",
+        "nych.bonit"
+      ]
+    },
+    {
+      "id": "mg8-engine-reference-1",
+      "repository": "nhartman000/mg8-engine",
+      "role": "Current prompt/container authoring and historical/reference executor; not trusted enforcement runtime.",
+      "formats": {
+        "MG8": "Canonical resource-binding envelope plus explicitly retained embedded legacy units.",
+        "ORK": "Flat JSON flow/ork_flow/steps gate order; pinned loader does not validate profile identity or reject foreign BONIT/control fields. Do not use it for policy enforcement.",
+        "BONIT": "Block mg8.bonit is a specification; fixed mapping/congruence checks implemented in pipeline code, not a generic parser.",
+        "GST": "Pydantic state/context model; profile-specific merge/projection, not universal temporal advancement.",
+        "G8SON": "Canonical-style 1\u20133 gate array loading and permissive legacy single-gate models; not full dedicated-schema validation, and generic executor trusts callback outcomes.",
+        "QSON": "Legacy entries/step/actor-string reference-model serialization; NOT canonical events schema."
+      },
+      "revision": "72b954d78e8168d0e4f7862085ececf3cd97a80a",
+      "source_paths": [
+        "src/mg8_engine/core.py",
+        "src/mg8_engine/ork.py",
+        "src/mg8_engine/models.py",
+        "src/mg8_engine/pipeline.py",
+        "mg8.bonit"
+      ]
+    },
+    {
+      "id": "response-contract-v1",
+      "repository": "nhartman000/mg8-engine",
+      "role": "Opt-in NYCH-first model-facing contract and fresh response byte comparison.",
+      "formats": {
+        "MG8": "Resource-binding envelope, one GST.",
+        "ORK": "Exact named repeatability-experiment-v1 generate_once subset; no repair/reuse, unsupported controls rejected.",
+        "BONIT": "Not consumed by this profile; no implied BONIT execution.",
+        "GST": "Full authored globals/facts/context supplied to model.",
+        "G8SON": "Explicit historical atomic_requirements profile, preserved text/IDs; semantic requirements not independently certified.",
+        "QSON": "Same engine entries reference-model export; comparison result separate from semantic gate result."
+      },
+      "revision": "72b954d78e8168d0e4f7862085ececf3cd97a80a",
+      "source_paths": [
+        "src/mg8_engine/response_contract.py",
+        "docs/response-contracts.md"
+      ]
+    },
+    {
+      "id": "mg8-runtime-sequential/0.1",
+      "repository": "nhartman000/mg8-runtime",
+      "role": "Current enforced-admission/permit/commit reference runtime; initial profile, not certified production deployment.",
+      "formats": {
+        "MG8": "Strict 1.0 resource envelope, exactly one GST, confined source snapshots.",
+        "ORK": "Only JSON ork_profile=mg8-runtime-sequential/0.1 with bonit and complete sequential flow.",
+        "BONIT": "Only JSON bonit_profile=mg8-runtime/0.1 actors/scopes/budgets/bindings; rejects other grammar.",
+        "GST": "Requires gst_version=1.0 and explicit state object; no automatic full internal/external chronology merge.",
+        "G8SON": "Canonical schema/AND OR NAND NOR ternary evaluator; historical requirements only with explicit reviewed bindings.",
+        "QSON": "Canonical schema events export; authoritative append-only SQLite and verified per-run hash chain."
+      },
+      "revision": "514cc3e0eb2146ee4156450e76b705d67de05f14",
+      "source_paths": [
+        "src/mg8_runtime/loader.py",
+        "src/mg8_runtime/gates.py",
+        "src/mg8_runtime/store.py",
+        "docs/IMPLEMENTATION.md"
+      ]
+    },
+    {
+      "id": "historical-mgate-keeper",
+      "repository": "nhartman000/mgate-keeper",
+      "role": "Maintained historical experiment/reproduction surface, not canonical format authority or enforcement runtime.",
+      "formats": {
+        "MG8": "Earlier experiment/project configuration.",
+        "ORK": "No current block-language execution claim.",
+        "BONIT": "No generic interpreter.",
+        "GST": "Context plus constraints transmitted in current repository; old ZIP implementations may omit them.",
+        "G8SON": "Prompt requirements; does not establish independent domain evaluation.",
+        "QSON": "Experiment audit response-pair profile; do not relabel canonical ledger."
+      },
+      "revision": "02036d7b58790df98984c5c0d0f0b10feba45a33",
+      "source_paths": [
+        "mgate_keeper/__init__.py"
+      ]
+    },
+    {
+      "id": "historical-mgate-suite",
+      "repository": "nhartman000/mgate-suite",
+      "role": "Historical/experimental GUI/engine implementation; existing status document identifies role drift.",
+      "formats": {
+        "MG8": "Historical project/orchestration meaning, not current unit envelope.",
+        "ORK": "Historical graph/flow behavior, not current v0.3 parser.",
+        "BONIT": "No current universal interpreter claim.",
+        "GST": "Historical context modifiers.",
+        "G8SON": "Historical Boolean/graph behavior; use its own schemas only.",
+        "QSON": "Historical trace format; no implicit canonical conversion."
+      },
+      "revision": "b5bac36447f50f438d780e678cff3c73da5deaa9",
+      "source_paths": [
+        "IMPLEMENTATION_STATUS.md",
+        "spec/version_matrix.json"
+      ]
+    }
+  ],
+  "status_axes": {
+    "evaluation": [
+      "PASS",
+      "FAIL",
+      "UNKNOWN"
+    ],
+    "canonical_gate_trace": [
+      "PASS",
+      "FAIL",
+      "INTERMEDIATE"
+    ],
+    "mapping": {
+      "UNKNOWN": "INTERMEDIATE"
+    },
+    "controller_bound": "UNRESOLVED is a controller outcome, not automatically a gate FAIL. Any historical mapping in mg8.bonit is scoped to that profile."
+  },
+  "production_status": "No repository is certified production-ready by this registry. Current reference roles are explicit.",
+  "historical_branch_policy": "Default branches named here are the active reference entry points. Historical branches/ZIPs remain unchanged and must be selected by explicit revision/profile; no branch was merged, deleted or archived by this registry."
+}

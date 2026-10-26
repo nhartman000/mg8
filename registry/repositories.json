@@ -1,0 +1,89 @@
+{
+  "registry_version": "1.0",
+  "repositories": [
+    {
+      "subsystem": "encoder-and-mgate",
+      "repository": "nhartman000/nych",
+      "default_branch": "main",
+      "inspected_revision": "cee3610723ffe4877c424591711fed29717ab655",
+      "status": "current-reference",
+      "role": "NYCH deterministic intake, symbolic context and M-Gate AtomicRequirement interfaces",
+      "url": "https://github.com/nhartman000/nych"
+    },
+    {
+      "subsystem": "prompt-authoring-engine",
+      "repository": "nhartman000/mg8-engine",
+      "default_branch": "main",
+      "inspected_revision": "72b954d78e8168d0e4f7862085ececf3cd97a80a",
+      "status": "current-reference",
+      "role": "Container/response contract authoring and reference execution; not trusted state/effect authority",
+      "url": "https://github.com/nhartman000/mg8-engine"
+    },
+    {
+      "subsystem": "enforcement-runtime",
+      "repository": "nhartman000/mg8-runtime",
+      "default_branch": "main",
+      "inspected_revision": "514cc3e0eb2146ee4156450e76b705d67de05f14",
+      "status": "current-reference",
+      "role": "Trusted host admission, evaluator registration, permits, state commits and QSON",
+      "url": "https://github.com/nhartman000/mg8-runtime"
+    },
+    {
+      "subsystem": "mg8-ork-bonit-authority",
+      "repository": "nhartman000/mg8",
+      "default_branch": "main",
+      "inspected_revision": "175106883c0c3fc6b14894c4fbdd4cbd51e2b9b6",
+      "status": "canonical-format-authority",
+      "role": "MG8 unit schema and interim ORK/BONIT role/profile registry",
+      "url": "https://github.com/nhartman000/mg8"
+    },
+    {
+      "subsystem": "gst-authority",
+      "repository": "nhartman000/gst",
+      "default_branch": "main",
+      "inspected_revision": "0d8aefbede38a6e9e8ec671ef9a135d491147ff2",
+      "status": "canonical-format-authority",
+      "role": "GST conceptual state/context/continuity semantics",
+      "url": "https://github.com/nhartman000/gst"
+    },
+    {
+      "subsystem": "g8son-authority",
+      "repository": "nhartman000/g8son",
+      "default_branch": "000",
+      "inspected_revision": "ecb193d90189c8bfdb2d0e7cebb00432a1d0e260",
+      "status": "canonical-format-authority",
+      "role": "G8SON bounded-gate schema",
+      "url": "https://github.com/nhartman000/g8son"
+    },
+    {
+      "subsystem": "qson-authority",
+      "repository": "nhartman000/qson",
+      "default_branch": "main",
+      "inspected_revision": "92e6e3e8f9f0fa4f501db21228116417d71df998",
+      "status": "canonical-format-authority",
+      "role": "QSON events/sequence/actor trace schema",
+      "url": "https://github.com/nhartman000/qson"
+    },
+    {
+      "subsystem": "reproducibility-prototype",
+      "repository": "nhartman000/mgate-keeper",
+      "default_branch": "main",
+      "inspected_revision": "02036d7b58790df98984c5c0d0f0b10feba45a33",
+      "status": "historical-experiment",
+      "role": "Historical reproducibility surface, not trusted admission authority",
+      "url": "https://github.com/nhartman000/mgate-keeper"
+    },
+    {
+      "subsystem": "gui-and-older-engine",
+      "repository": "nhartman000/mgate-suite",
+      "default_branch": "main",
+      "inspected_revision": "b5bac36447f50f438d780e678cff3c73da5deaa9",
+      "status": "historical-experimental",
+      "role": "Older suite with historical format roles explicitly documented",
+      "url": "https://github.com/nhartman000/mgate-suite"
+    }
+  ],
+  "deployment_certification": null,
+  "unmerged_work": "mg8-engine PR3 codex/implementable-mg8-v0.4 is not main and is not the active enforcement runtime. No implicit merge.",
+  "unclassified_repositories": "Other similarly named/private research repositories are not designated as current deployment targets by this registry; absence of designation is not an archival action."
+}
