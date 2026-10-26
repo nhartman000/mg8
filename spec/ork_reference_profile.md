@@ -29,9 +29,12 @@ Current known `.bonit` files:
 
 - `TOTElibrary.bonit` (in `T.O.T.E-loops`) — the database-population mesh
   protocol, migrated out of `tote_population_mesh.ork` verbatim.
-- `nych.bonit`, `mg8.bonit` — not yet written. These will carry the
-  nych-encoder (steps 1–2) and mg8-engine (step 3) rulesets for the main
-  pipeline once that content is actually drafted.
+- `nych/nych.bonit` and `mg8-engine/mg8.bonit` now exist as authored
+  block-syntax workflow specifications for encoder/mapping and engine
+  congruence/gate-authoring stages. Some stages are implemented directly
+  by pipeline code; the presence of these files does not establish a
+  general executable BONIT parser. Implementation support must be declared
+  per named profile, not inferred from a filename or a historical comment.
 
 No standalone repository exists yet for `.bonit`, same status as `.ork`
 itself — defined here, interim, until it earns its own repository.

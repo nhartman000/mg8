@@ -4,6 +4,10 @@
 
 The `.mg8` file/unit binds structured state, constraints, orchestration, conditional transform eligibility, and an auditable transformation ledger into a discrete composable unit.
 
+## Canonical compatibility and repository authority
+
+Use the [pinned compatibility matrix](docs/COMPATIBILITY.md) and [repository authority map](docs/REPOSITORY_AUTHORITY.md) before selecting an implementation. They distinguish current format authorities, named executable profiles, prompt-only/historical adapters and unsupported grammar. The machine registries live in [`registry/`](registry/), with positive and expected-negative schema fixtures checked in CI.
+
 ## File family
 
 ```text

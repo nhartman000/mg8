@@ -10,10 +10,11 @@ This document is the cross-file registry for the current MG8 public baseline.
 |---|---|---|
 | `.mg8pk` | package/composition container for one or more `.mg8` units | interim specification in this repository |
 | `.mg8` | bounded execution unit/container | this repository |
-| `.ork` | orchestration, ordering, dependencies, branches, loops | interim reference profile in this repository |
+| `.ork` | invariant position/loop-control header and adopted BONIT reference; executable JSON subsets must name their profile | interim reference profile in this repository |
+| `.bonit` | domain authority, workflow, rules and evaluator/policy declarations adopted by ORK | interim role in this repository; named implementations have their own bounded profiles |
 | `.gst` | structured state/context/constraints and continuity | `nhartman000/gst` |
 | `.g8son` | bounded conditional gate/operator file, 1–3 gates | `nhartman000/g8son` |
-| `.qson` | auditable event-level execution trace | `nhartman000/qson-` |
+| `.qson` | auditable event-level execution trace | `nhartman000/qson` |
 
 Auxiliary / historical formats such as `.gitson` are not required members of the current core family.
 
