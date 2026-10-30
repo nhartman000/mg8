@@ -25,4 +25,4 @@ Source registry: [repositories.json](../registry/repositories.json). Consolidati
 
 The designation is a routing choice, not a moving-tip compatibility guarantee. Exact implementation baselines and pinned source links are in the [matrix source table](COMPATIBILITY.md#pinned-implementation-sources) and machine registries; unpublished fixes are not credited to those baselines.
 
-See the [compatibility matrix](COMPATIBILITY.md) for actual supported and unsupported serialization/execution profiles.
+See the [compatibility matrix](COMPATIBILITY.md) for actual supported and unsupported serialization/execution profiles and the [verified stack index](VERIFIED_STACK.md) for published revisions, actual CI and independent final-state verification.

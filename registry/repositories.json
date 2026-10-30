@@ -5,7 +5,7 @@
       "subsystem": "encoder-and-mgate",
       "repository": "nhartman000/nych",
       "default_branch": "main",
-      "inspected_revision": "cee3610723ffe4877c424591711fed29717ab655",
+      "inspected_revision": "57b81e9220069dd5ff72197b41288c9613e3343b",
       "status": "current-reference",
       "role": "NYCH deterministic intake, symbolic context and M-Gate AtomicRequirement interfaces",
       "url": "https://github.com/nhartman000/nych"
@@ -14,7 +14,7 @@
       "subsystem": "prompt-authoring-engine",
       "repository": "nhartman000/mg8-engine",
       "default_branch": "main",
-      "inspected_revision": "72b954d78e8168d0e4f7862085ececf3cd97a80a",
+      "inspected_revision": "daf260dae62bd27810d84b3107e0d22f1dd30736",
       "status": "current-reference",
       "role": "Container/response contract authoring and reference execution; not trusted state/effect authority",
       "url": "https://github.com/nhartman000/mg8-engine"
@@ -23,7 +23,7 @@
       "subsystem": "enforcement-runtime",
       "repository": "nhartman000/mg8-runtime",
       "default_branch": "main",
-      "inspected_revision": "514cc3e0eb2146ee4156450e76b705d67de05f14",
+      "inspected_revision": "c4b2bc4ab6bc051ae7ca53e69f457eb772d28097",
       "status": "current-reference",
       "role": "Trusted host admission, evaluator registration, permits, state commits and QSON",
       "url": "https://github.com/nhartman000/mg8-runtime"
