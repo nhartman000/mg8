@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Packed MG8/MG8PK envelope 1.0",
+  "description": "Envelope only; ZIP safety, resource schemas, references and hashes need separate validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile", "kind", "manifest", "integrity"],
+  "properties": {
+    "profile": {"enum": ["mg8-packed/1.0", "mg8pk-packed/1.0"]},
+    "kind": {"enum": ["unit", "package"]},
+    "manifest": {"const": "manifest.json"},
+    "integrity": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "allOf": [
+          {"pattern": "^[A-Za-z0-9_-][A-Za-z0-9_./-]*$"},
+          {"not": {"pattern": "(^|/)\\.{1,2}(/|$)|//|/$"}},
+          {"not": {"const": "container.json"}}
+        ]
+      },
+      "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"const": "unit"}}},
+      "then": {"properties": {"profile": {"const": "mg8-packed/1.0"}}},
+      "else": {"properties": {"profile": {"const": "mg8pk-packed/1.0"}}}
+    }
+  ]
+}
