@@ -89,6 +89,12 @@ The opt-in [response-contract profile](docs/RESPONSE_CONTRACTS.md) binds GST glo
 
 [Published live evidence](experiments/response-contracts/README.md) retains both the original divergent batch and the revised batch: each revised contract produced three byte-identical responses in three fresh calls, without temperature, seed or answer reuse. This is a finite observed result, not a guarantee of deterministic inference. The existing canonical format contracts are unchanged.
 
+## Packed single-file units and packages
+
+The opt-in [packed container profile 1.0](spec/packed_containers_v1.md) defines a single physical `.mg8` containing its GST, bounded G8SON files, ORK and QSON, and a `.mg8pk` containing complete units plus `system.ork`. It uses uncompressed ZIP storage, explicit profile identity and per-member integrity. The [envelope schema](schema/packed-container.schema.json) is additive; the existing JSON manifest schema is unchanged.
+
+This is a physical packaging and authoring profile, not a claim that legacy loaders execute these archives or that a composed chain improves reasoning. Import is copy-only and execution remains separately authorized.
+
 ## Specification status
 
 This repository is the authority for the `.mg8` unit and the current cross-file family registry.
