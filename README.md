@@ -94,3 +94,7 @@ The opt-in [response-contract profile](docs/RESPONSE_CONTRACTS.md) binds GST glo
 This repository is the authority for the `.mg8` unit and the current cross-file family registry.
 
 The roles of `.ork` and `.mg8pk` are established, but standalone repositories/full grammars for them are not yet present in the connected GitHub account. Their documents here are therefore explicitly versioned as interim/baseline specifications rather than silently inventing a finished universal grammar.
+
+## License
+
+Copyright (c) 2026 American Milestone Inc. All rights reserved. Original code and independently authored specifications are publicly viewable for evaluation only — see [LICENSE](LICENSE). Copies obtained earlier under the previous MIT license keep the rights that license granted.
